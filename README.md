@@ -76,20 +76,6 @@ You can install the Oh My Tmux Manager using a plugin manager or manually.
    source /path/to/omt-manager/omt-manager.sh
    ```
 
-### Manual Installation
-
-1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/Hzbeta/omt-manager.git
-   ```
-
-2. Add the following line to your `.zshrc` (for Zsh) or `.bashrc` (for Bash), replacing `/path/to/omt-manager.sh` with the actual path to the `omt-manager.sh` file in the cloned repository:
-
-   ```sh
-   source /path/to/omt-manager.sh
-   ```
-
 ## Usage
 
 Use the `omt` command to manage your Oh My Tmux installation:
