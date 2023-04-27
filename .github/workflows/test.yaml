@@ -1,0 +1,51 @@
+name: test
+on:
+  push:
+    paths:
+      - '**.sh'
+  pull_request:
+    paths:
+      - '**.sh'
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Install ruby
+        run: |
+          sudo apt update
+          sudo apt install -y ruby
+
+      - name: Install shUnit2 and bashcov
+        run: |
+          cd ~
+          git clone https://github.com/kward/shunit2.git
+          sudo cp shunit2/shunit2 /usr/local/bin
+          sudo chmod +x /usr/local/bin/shunit2
+          sudo gem install bashcov
+
+      - name: Run tests and generate coverage report
+        run: |
+          cd ${{ github.workspace }}
+          bash ./tests/converage_report.sh to_text
+          cd coverage
+          zip -r ../coverage-report.zip *
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: ${{ github.workspace }}/coverage-report.zip
+
+      - name: Check coverage result
+        run: |
+          cd ${{ github.workspace }}/coverage
+          if tail -2 result.txt | grep -q "LOC (100.0%) covered."; then
+            echo "Coverage is 100%"
+          else
+            echo "Coverage is less than 100%"
+            exit 1
+          fi
