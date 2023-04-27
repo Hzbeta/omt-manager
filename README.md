@@ -21,12 +21,22 @@ You can install the Oh My Tmux Manager using a plugin manager or manually.
 
 #### For Zsh
 
-- **Zinit**
+- **Zinit / Zi**
 
   Add the following content to your `.zshrc`:
 
   ```sh
-  zinit ice wait lucid has'tmux'
+  zinit load Hzbeta/omt-manager
+  ```
+
+  Further, you can use the following config to:
+
+  - Lazy load the plugin when you installed Tmux.
+  - Install Oh My Tmux automatically when the plugin is loaded.
+  - If Oh My Tmux is already installed, the plugin won't do anything.
+
+  ```sh
+  zinit ice wait lucid has'tmux' atload'omt install -s'
   zinit load Hzbeta/omt-manager
   ```
 
