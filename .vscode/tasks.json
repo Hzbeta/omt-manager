@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Converage report",
+            "type": "shell",
+            "command": "bash ./tests/converage_report.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Github Action localy",
+            "type": "shell",
+            "command": "mkdir -p /tmp/omt-manager && act --artifact-server-path /tmp/omt-manager -P ubuntu-latest=ghcr.io/catthehacker/ubuntu:runner-latest",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "name": "OMT-Manager",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "dev"
+}
