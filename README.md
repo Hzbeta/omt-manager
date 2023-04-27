@@ -1,5 +1,6 @@
 # Oh My Tmux Manager
 
+[![GitHub license](https://img.shields.io/github/license/Hzbeta/omt-manager)](LICENSE)
 [![GitHub Actions Test](https://github.com/Hzbeta/omt-manager/actions/workflows/test.yaml/badge.svg)](https://github.com/Hzbeta/omt-manager/actions)
 [![Test Coverage](https://img.shields.io/badge/test%20coverage-100%25-brightgreen)](https://github.com/Hzbeta/omt-manager/actions)
 
