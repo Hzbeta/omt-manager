@@ -68,7 +68,7 @@ You can install the OMT Manager using a plugin manager or manually.
   Add the following line to your `.zshrc`:
 
   ```sh
-  zplug "Hzbeta/omt-manager", if:"command -v tmux > /dev/null"
+  zplug "Hzbeta/omt-manager"
   ```
 
 <!-- Supplement other bash plugin managers if needed -->
