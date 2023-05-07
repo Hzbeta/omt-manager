@@ -6,6 +6,21 @@
 
 *Oh My Tmux* Manager (OMT Manager) is a shell plugin that helps you to easily manage your Tmux configurations. With OMT Manager, you can install, remove, and upgrade [*Oh My Tmux*](https://github.com/gpakosz/.tmux) with just a few commands.
 
+- [Oh My Tmux Manager](#oh-my-tmux-manager)
+  - [Features](#features)
+  - [Installation](#installation)
+    - [With Plugin Manager](#with-plugin-manager)
+      - [For Zsh](#for-zsh)
+    - [Manual Installation](#manual-installation)
+  - [Usage](#usage)
+    - [Basic Usage](#basic-usage)
+    - [Options](#options)
+      - [Install](#install)
+      - [Remove](#remove)
+      - [Upgrade](#upgrade)
+  - [Custom Configuration](#custom-configuration)
+  - [License](#license)
+
 ## Features
 
 - Install and setup *Oh My Tmux* easily
@@ -18,7 +33,7 @@
 
 You can install the OMT Manager using a plugin manager or manually.
 
-### Plugin Manager
+### With Plugin Manager
 
 #### For Zsh
 
@@ -87,32 +102,6 @@ You can install the OMT Manager using a plugin manager or manually.
    source /path/to/omt-manager/omt-manager.sh
    ```
 
-## Configuration
-
-The default installation and configuration paths for Oh My Tmux and Tmux are as follows:
-
-```sh
-# Default installation path of Oh My Tmux
-MANAGER_OMT_DIR_PATH="${HOME}/.tmux"
-
-# Default configuration paths for Tmux
-MANAGER_OMT_CONF_PATH="${HOME}/.tmux.conf"
-MANAGER_OMT_LOCAL_CONF_PATH="${HOME}/.tmux.conf.local"
-```
-
-You can Customize the installation path of *Oh My Tmux* and the configuration path of Tmux by setting the following environment variables:
-
-```sh
-# Customize the installation path of Oh My Tmux
-export MANAGER_OMT_DIR_PATH="$XDG_CONFIG_HOME/tmux/oh-my-tmux"
-
-# Customize the configuration path of Tmux
-export MANAGER_OMT_CONF_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf"
-export MANAGER_OMT_LOCAL_CONF_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf.local"
-```
-
-**Be cautious** when configuring these paths, as this plugin works within the directory of Oh my tmux. If you set the folder path of another Git project as the path for Oh my tmux, that project may become **corrupted**. Therefore, please **double-check your configuration** before running any commands related to this plugin.
-
 ## Usage
 
 Use the `omt` command to manage your *Oh My Tmux* installation:
@@ -146,6 +135,32 @@ omt [install|remove|upgrade]
 - `-s`: Silent mode, suppress output
 - `-o`: Overwrite user config, backup and replace existing .tmux.conf.local
 - `-h`: Show help information
+
+## Custom Configuration
+
+The default installation and configuration paths for Oh My Tmux and Tmux are as follows:
+
+```sh
+# Default installation path of Oh My Tmux
+MANAGER_OMT_DIR_PATH="${HOME}/.tmux"
+
+# Default configuration paths for Tmux
+MANAGER_OMT_CONF_PATH="${HOME}/.tmux.conf"
+MANAGER_OMT_LOCAL_CONF_PATH="${HOME}/.tmux.conf.local"
+```
+
+You can Customize the installation path of *Oh My Tmux* and the configuration path of Tmux by setting the following environment variables:
+
+```sh
+# Customize the installation path of Oh My Tmux
+export MANAGER_OMT_DIR_PATH="$XDG_CONFIG_HOME/tmux/oh-my-tmux"
+
+# Customize the configuration path of Tmux
+export MANAGER_OMT_CONF_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf"
+export MANAGER_OMT_LOCAL_CONF_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf.local"
+```
+
+**Be cautious** when configuring these paths, as this plugin works within the directory of Oh my tmux. If you set the folder path of another Git project as the path for Oh my tmux, that project may become **corrupted**. Therefore, please **double-check your configuration** before running any commands related to this plugin.
 
 ## License
 
