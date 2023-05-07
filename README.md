@@ -121,7 +121,7 @@ Use the `omt` command to manage your *Oh My Tmux* installation:
 omt [install|remove|upgrade]
 ```
 
-### Commands
+### Basic Usage
 
 - `omt install`: Install *Oh My Tmux*
 - `omt remove`: Remove *Oh My Tmux* and related configurations
@@ -146,44 +146,6 @@ omt [install|remove|upgrade]
 - `-s`: Silent mode, suppress output
 - `-o`: Overwrite user config, backup and replace existing .tmux.conf.local
 - `-h`: Show help information
-
-## Examples
-
-Install *Oh My Tmux*:
-
-```sh
-omt install
-```
-
-Force install *Oh My Tmux* and overwrite existing configurations:
-
-```sh
-omt install -f -o
-```
-
-Remove *Oh My Tmux* and related configurations:
-
-```sh
-omt remove
-```
-
-Remove *Oh My Tmux*, .tmux.conf, and .tmux.conf.local:
-
-```sh
-omt remove -a
-```
-
-Upgrade *Oh My Tmux* to the latest version:
-
-```sh
-omt upgrade
-```
-
-Upgrade *Oh My Tmux* and overwrite existing .tmux.conf.local:
-
-```sh
-omt upgrade -o
-```
 
 ## License
 
