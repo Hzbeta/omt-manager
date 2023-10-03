@@ -6,6 +6,9 @@ on:
   pull_request:
     paths:
       - '**.sh'
+  schedule:
+    - cron: "0 12 * * 1"  # run every Monday at 12:00 UTC
+  workflow_dispatch:
 
 jobs:
   test-coverage:
