@@ -3,9 +3,11 @@ on:
   push:
     paths:
       - '**.sh'
+      - '.github/workflows/**'
   pull_request:
     paths:
       - '**.sh'
+      - '.github/workflows/**'
   schedule:
     - cron: "0 12 * * 1"  # run every Monday at 12:00 UTC
   workflow_dispatch:
