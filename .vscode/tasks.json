@@ -2,15 +2,15 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Converage report",
+            "label": "Coverage report",
             "type": "shell",
-            "command": "bash ./tests/converage_report.sh",
+            "command": "bash ./tests/coverage_report.sh",
             "problemMatcher": []
         },
         {
-            "label": "Run Github Action localy",
+            "label": "Run Github Action locally",
             "type": "shell",
-            "command": "mkdir -p /tmp/omt-manager && act --artifact-server-path /tmp/omt-manager -P ubuntu-latest=ghcr.io/catthehacker/ubuntu:runner-latest",
+            "command": "bash ./tests/github_action.sh",
             "problemMatcher": []
         }
     ]
