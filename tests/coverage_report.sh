@@ -1,6 +1,9 @@
 #!/bin/bash
 # working dir: repo root
 
+# Set the environment variables
+report_path="./coverage"
+
 # get the repo dir
 script_dir="$(dirname "$(readlink -f "$0")")"
 repo_dir="$(dirname "$script_dir")"
@@ -12,15 +15,13 @@ if [[ "$current_dir" != "$repo_dir" ]]; then
     exit 1
 fi
 
-# check if act exists
+# check if bashcov exists
 if ! command -v bashcov &>/dev/null; then
-    echo "act not installed"
+    echo "bashcov not installed"
     exit 1
 fi
 
-# make dir
-report_path="./coverage"
-
+# Make sure the report directory exists
 if [[ -d "$report_path" ]]; then
     rm -rf "$report_path"
 fi

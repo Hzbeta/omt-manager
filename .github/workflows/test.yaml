@@ -35,7 +35,7 @@ jobs:
       - name: Run tests and generate coverage report
         run: |
           cd ${{ github.workspace }}
-          bash ./tests/converage_report.sh to_text
+          bash ./tests/coverage_report.sh to_text
           cd coverage
           zip -r ../coverage-report.zip *
 
