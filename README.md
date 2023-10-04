@@ -19,6 +19,7 @@
       - [Remove](#remove)
       - [Upgrade](#upgrade)
   - [Custom Configuration](#custom-configuration)
+  - [Development](#development)
   - [License](#license)
 
 ## Features
@@ -161,6 +162,26 @@ export MANAGER_OMT_LOCAL_CONF_PATH="$XDG_CONFIG_HOME/tmux/tmux.conf.local"
 ```
 
 **Be cautious** when configuring these paths, as this plugin works within the directory of Oh my tmux. If you set the folder path of another Git project as the path for Oh my tmux, that project may become **corrupted**. Therefore, please **double-check your configuration** before running any commands related to this plugin.
+
+## Development
+
+To develop this plugin, you need to install the following dependencies:
+- [act](https://github.com/nektos/act): A tool for running GitHub Actions locally.
+- [shUnit2](https://github.com/kward/shunit2): A unit test framework for Bash.
+- [bashcov](https://github.com/infertux/bashcov): A code coverage analysis tool for Bash.
+
+And then, you can run the following commands to start developing:
+1. Clone the repository.
+2. Open the repository in your favorite editor.
+3. Make changes to the code.
+4. Run `bash ./tests/coverage_report.sh` to test your changes and generate a coverage report, please make sure that the coverage is 100%.
+5. Run `act` to test your changes with GitHub Actions locally.
+6. Push your changes to GitHub and create a Pull Request.
+
+Tips:
+- If you are using VS Code, you can use the Dev Container to develop this plugin without installing any dependencies. See [here](https://code.visualstudio.com/docs/remote/containers) for more details.
+- And if you are using WSL2 and Docker Desktop, please run `docker login` in WSL2, before opening Dev Container to avoid the `credsStore` error.
+- The default Dockerfile does not contain the `act` tool, as `act` utilizes Docker itself. If you want to use `act` within the Dev Container, you will need to configure Docker in Docker (DinD) or Docker out of Docker (DooD) manually.
 
 ## License
 
