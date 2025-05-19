@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install ruby
         run: |
@@ -40,7 +40,7 @@ jobs:
           zip -r ../coverage-report.zip *
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: ${{ github.workspace }}/coverage-report.zip
@@ -48,7 +48,7 @@ jobs:
       - name: Check coverage result
         run: |
           cd ${{ github.workspace }}/coverage
-          if tail -2 result.txt | grep -q "LOC (100.0%) covered."; then
+          if tail -2 result.txt | grep -q "Line Coverage: 100.0%"; then
             echo "Coverage is 100%"
           else
             echo "Coverage is less than 100%"
