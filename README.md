@@ -4,6 +4,17 @@
 [![GitHub Actions Test](https://github.com/Hzbeta/omt-manager/actions/workflows/test.yaml/badge.svg)](https://github.com/Hzbeta/omt-manager/actions)
 [![Test Coverage](https://img.shields.io/badge/test%20coverage-100%25-brightgreen)](https://github.com/Hzbeta/omt-manager/actions)
 
+> 🚫 **DEPRECATED — No Longer Using Script-Based Tmux Management**
+>
+> **This plugin is no longer maintained.**
+> I no longer use this Zsh plugin to manage [Oh My Tmux](https://github.com/gpakosz/.tmux) or any script-based tooling for `tmux` configuration.
+> Instead, I now configure `tmux` declaratively using [Home Manager](https://github.com/nix-community/home-manager) as part of my Nix-based dotfiles.
+>
+> 👉 My current `tmux` configuration can be found [here](https://github.com/Hzbeta/nix-dotfiles/blob/main/modules/tmux.nix).
+>
+> This project will be published as archived. Feel free to fork or reuse it if it suits your workflow.
+> Thanks for following along 🌀
+
 *Oh My Tmux* Manager (OMT Manager) is a shell plugin that helps you to easily manage your Tmux configurations. With OMT Manager, you can install, remove, and upgrade [*Oh My Tmux*](https://github.com/gpakosz/.tmux) with just a few commands.
 
 - [Oh My Tmux Manager](#oh-my-tmux-manager)
